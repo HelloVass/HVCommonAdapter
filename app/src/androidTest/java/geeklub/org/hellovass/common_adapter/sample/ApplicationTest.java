@@ -1,4 +1,4 @@
-package geeklub.org.hellovass.hv_recyclerview_common_adapter.sample;
+package geeklub.org.hellovass.common_adapter.sample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

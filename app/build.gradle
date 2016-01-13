@@ -5,7 +5,7 @@ android {
   buildToolsVersion "23.0.2"
 
   defaultConfig {
-    applicationId "geeklub.org.hellovass.recyclerview_common_adapter.sample"
+    applicationId "geeklub.org.hellovass.common_adapter.sample"
     minSdkVersion 16
     targetSdkVersion 23
     versionCode 1

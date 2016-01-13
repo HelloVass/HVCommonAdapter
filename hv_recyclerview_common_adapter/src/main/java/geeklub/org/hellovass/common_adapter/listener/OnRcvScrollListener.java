@@ -1,4 +1,4 @@
-package geeklub.org.hellovass.hv_recyclerview_common_adapter.sample.listener;
+package geeklub.org.hellovass.common_adapter.listener;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;

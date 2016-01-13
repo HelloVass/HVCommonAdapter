@@ -1,4 +1,4 @@
-package geeklub.org.hellovass.hv_recyclerview_common_adapter.sample;
+package geeklub.org.hellovass.common_adapter.sample;
 
 import android.content.Context;
 import android.support.annotation.IntDef;
@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import geeklub.org.hellovass.hv_recyclerview_common_adapter.sample.listener.OnRcvItemClickListener;
-import geeklub.org.hellovass.hv_recyclerview_common_adapter.sample.listener.OnRcvItemLongClickListener;
+import geeklub.org.hellovass.common_adapter.listener.OnRcvItemClickListener;
+import geeklub.org.hellovass.common_adapter.listener.OnRcvItemLongClickListener;
 import java.util.List;
 
 /**
