@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HVCommonAdapter.iml" filepath="$PROJECT_DIR$/HVCommonAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hv_recyclerview_common_adapter/hv_recyclerview_common_adapter.iml" filepath="$PROJECT_DIR$/hv_recyclerview_common_adapter/hv_recyclerview_common_adapter.iml" />
+    </modules>
+  </component>
+</project>
