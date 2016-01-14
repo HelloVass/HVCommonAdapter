@@ -1,4 +1,4 @@
-package geeklub.org.hellovass.common_adapter.sample;
+package geeklub.org.hellovass.common_adapter;
 
 import android.content.Context;
 import android.support.annotation.IntDef;

@@ -1,4 +1,4 @@
-package geeklub.org.hellovass.common_adapter.sample;
+package geeklub.org.hellovass.common_adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
