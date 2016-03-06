@@ -1,5 +1,8 @@
 # HVCommonAdapter
 
+
+[![](https://jitpack.io/v/HelloVass/HVCommonAdapter.svg)](https://jitpack.io/#HelloVass/HVCommonAdapter)
+
 ## RecyclerCommonAdapter
 
 一个适用于 RecyclerView 的通用 Adapter。
