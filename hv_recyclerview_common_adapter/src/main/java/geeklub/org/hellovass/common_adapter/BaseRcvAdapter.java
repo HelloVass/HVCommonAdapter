@@ -1,7 +1,6 @@
 package geeklub.org.hellovass.common_adapter;
 
 import android.content.Context;
-import android.support.annotation.IntDef;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,11 +26,8 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
 
   private OnRcvItemLongClickListener mOnItemLongClickListener;
 
+  // Footer 类型
   public final static int ITEM_VIEW_TYPE_FOOTER = 0;
-
-  @IntDef({ ITEM_VIEW_TYPE_FOOTER }) public @interface ItemViewType {
-
-  }
 
   public BaseRcvAdapter(Context context, List<DATA> dataList) {
     this.mContext = context;
@@ -47,15 +43,14 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
     }
   }
 
-  @Override
-  public BaseRecyclerViewHolder onCreateViewHolder(ViewGroup parent, @ItemViewType int viewType) {
+  @Override public BaseRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     if (viewType == ITEM_VIEW_TYPE_FOOTER) {
       return new BaseRecyclerViewHolder(mFooterView);
     } else {
 
       final BaseRecyclerViewHolder viewHolder = new BaseRecyclerViewHolder(
           LayoutInflater.from(parent.getContext())
-              .inflate(getLayoutResID(viewType), parent, false));
+              .inflate(getLayoutResId(viewType), parent, false));
 
       viewHolder.getConvertView().setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
@@ -80,7 +75,7 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
 
   @Override public void onBindViewHolder(BaseRecyclerViewHolder holder, int position) {
     if (position >= 0 && position < mDataList.size()) {
-      convert(holder, getData(position));
+      convert(holder, getData(position), getItemViewTypeHV(getData(position)));
     }
   }
 
@@ -122,23 +117,6 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
     }
   }
 
-  /**
-   *
-   * @param holder
-   * @param data
-   */
-  protected abstract void convert(BaseRecyclerViewHolder holder, DATA data);
-
-  /**
-   * 得到对应的 Model
-   */
-  protected abstract int getItemViewTypeHV(DATA data);
-
-  /**
-   * 返回布局的 ID
-   */
-  protected abstract int getLayoutResID(@ItemViewType int viewType);
-
   public void setOnItemClickListener(OnRcvItemClickListener onItemClickListener) {
     mOnItemClickListener = onItemClickListener;
   }
@@ -146,4 +124,21 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
   public void setOnItemLongClickListener(OnRcvItemLongClickListener onItemLongClickListener) {
     mOnItemLongClickListener = onItemLongClickListener;
   }
+
+  /**
+   * @param holder ViewHolder
+   * @param data Model
+   * @param itemViewTypeHV “Item”对应的“Type”
+   */
+  protected abstract void convert(BaseRecyclerViewHolder holder, DATA data, int itemViewTypeHV);
+
+  /**
+   * 返回“DATA”中的“type”字段
+   */
+  protected abstract int getItemViewTypeHV(DATA data);
+
+  /**
+   * 返回“item”的“布局Id”
+   */
+  protected abstract int getLayoutResId(int viewType);
 }
