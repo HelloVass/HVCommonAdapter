@@ -68,9 +68,9 @@ public abstract class BaseRcvAdapter<DATA> extends RecyclerView.Adapter<BaseRecy
       viewHolder.getConvertView().setOnLongClickListener(new View.OnLongClickListener() {
         @Override public boolean onLongClick(View v) {
           if (mOnItemLongClickListener != null) {
-            mOnItemLongClickListener.onItemLongClick(v, viewHolder.getAdapterPosition());
+            return mOnItemLongClickListener.onItemLongClick(v, viewHolder.getAdapterPosition());
           }
-          return true;
+          return false;
         }
       });
 
